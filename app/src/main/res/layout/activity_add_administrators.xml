@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:context=".activity.AddAdministratorsActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:text="@string/add_administrators" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/righttext"
+            android:text="@string/add" />
+    </RelativeLayout>
+
+    <com.meetsl.scardview.SCardView style="@style/cardViewStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/name_tv"
+                style="@style/cardViewTextView"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/name_ed"
+                style="@style/cardViewEditText"
+                android:layout_alignBottom="@id/name_tv"
+                android:layout_toRightOf="@id/name_tv"
+                android:hint="@string/input_name"
+                android:maxLength="4" />
+
+            <TextView
+                style="@style/line_margin"
+                android:layout_below="@id/name_tv" />
+
+            <TextView
+                android:id="@+id/position_tv"
+                style="@style/cardViewTextView"
+                android:layout_below="@id/name_tv"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/position" />
+
+            <EditText
+                android:id="@+id/position_ed"
+                style="@style/cardViewEditText"
+                android:layout_alignBottom="@id/position_tv"
+                android:layout_toRightOf="@id/position_tv"
+                android:hint="请输入职务" />
+
+            <TextView
+                android:layout_below="@id/position_tv"
+                style="@style/line_margin"
+                />
+
+            <TextView
+                android:id="@+id/company_tv"
+                android:layout_below="@id/position_tv"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="单位:"
+                style="@style/cardViewTextView"/>
+
+            <EditText
+                android:id="@+id/company_ed"
+                android:layout_alignBottom="@id/company_tv"
+                android:layout_toRightOf="@id/company_tv"
+                android:hint="请输入单位名称"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                style="@style/cardViewEditText" />
+
+            <TextView
+                android:id="@+id/company_line"
+                android:layout_below="@id/company_tv"
+                style="@style/line_margin"
+                />
+
+            <TextView
+                android:id="@+id/phone_tv"
+                style="@style/cardViewTextView"
+                android:layout_below="@id/company_tv"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/phone_num" />
+
+            <EditText
+                android:id="@+id/phone_ed"
+                android:layout_alignBottom="@id/phone_tv"
+                android:layout_toRightOf="@id/phone_tv"
+                android:hint="@string/input_phone"
+                android:inputType="number"
+                style="@style/cardViewEditText" />
+            <TextView
+                android:layout_below="@id/phone_ed"
+                style="@style/line_margin"
+                />
+        </RelativeLayout>
+    </com.meetsl.scardview.SCardView>
+</LinearLayout>

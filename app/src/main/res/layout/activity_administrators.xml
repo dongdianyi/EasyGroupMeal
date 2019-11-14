@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.AdministrationActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/enterprise_administrators" />
+
+        <TextView
+            android:id="@+id/add_administrators"
+            style="@style/righttext"
+            android:text="@string/add" />
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/administrators_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_14" />
+
+    <include
+        android:visibility="gone"
+        layout="@layout/administrators_no" />
+</LinearLayout>

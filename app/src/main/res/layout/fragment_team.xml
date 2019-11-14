@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:context=".fragment.TeamFragment">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/team" />
+    </RelativeLayout>
+
+    <gzkj.easygroupmeal.utli.RefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/line_color"
+                app:elevation="0dp">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            style="@style/AppHWrapStyle"
+                            android:layout_margin="@dimen/dp_14"
+                            android:background="@drawable/fillet_white"
+                            android:padding="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/name_tv"
+                                style="@style/AppWrapStyle"
+                                android:textColor="@color/text_default"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+                                android:id="@+id/position_tv"
+                                style="@style/AppWrapStyle"
+                                android:layout_alignBaseline="@id/name_tv"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_toRightOf="@id/name_tv"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/sp_12" />
+
+                            <TextView
+                                android:id="@+id/company_tv"
+                                style="@style/AppWrapStyle"
+                                android:layout_below="@id/name_tv"
+                                android:paddingTop="@dimen/dp_10"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/sp_12" />
+
+                            <TextView
+                                android:id="@+id/verify_tv"
+                                style="@style/AppWrapStyle"
+                                android:layout_below="@id/name_tv"
+                                android:layout_toRightOf="@id/company_tv"
+                                android:paddingTop="@dimen/dp_10"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/sp_12"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/team_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/team_apply_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@mipmap/team_apply_iv"
+                                    android:drawablePadding="@dimen/dp_2"
+                                    android:gravity="center"
+                                    android:text="新的申请"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/sp_14" />
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:gravity="center"
+                                    android:id="@+id/team_apply_red"
+                                    android:layout_width="@dimen/dp_22"
+                                    android:layout_height="@dimen/dp_22"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_10"
+                                    android:layout_alignRight="@id/team_apply_tv"
+                                    android:background="@drawable/cricle_red" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/team_join_company_tv"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/team_join_company"
+                                android:drawablePadding="@dimen/dp_2"
+                                android:gravity="center"
+                                android:text="加入公司"
+                                android:textColor="@color/text_gray" />
+
+                            <TextView
+                                android:id="@+id/team_creat_team_tv"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/team_creat_team"
+                                android:drawablePadding="@dimen/dp_2"
+                                android:gravity="center"
+                                android:text="创建新团队"
+                                android:textColor="@color/text_gray"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/team_add_staff_tv"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/team_add_staff"
+                                android:drawablePadding="@dimen/dp_2"
+                                android:gravity="center"
+                                android:text="添加人员"
+                                android:textColor="@color/text_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:background="@drawable/fillet_white_top"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_14"
+                    android:text="团队信息"
+                    android:textColor="@color/text_default" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:background="@color/line_color" />
+            </android.support.design.widget.AppBarLayout>
+
+            <com.github.jdsjlzx.recyclerview.LRecyclerView
+                android:id="@+id/team_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:background="@drawable/fillet_white_bottom"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </gzkj.easygroupmeal.utli.RefreshLayout>
+</LinearLayout>

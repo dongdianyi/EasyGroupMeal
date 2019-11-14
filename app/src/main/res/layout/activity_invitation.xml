@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.InvitationActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:text="@string/invitation" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/righttext"
+            android:text="@string/sure" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_14"
+        android:background="@drawable/fillet_white"
+        android:padding="@dimen/dp_14">
+
+        <TextView
+            android:id="@+id/name_tv"
+            style="@style/cardViewTextView"
+            android:text="@string/name" />
+
+        <EditText
+            android:id="@+id/name_ed"
+            style="@style/cardViewEditText"
+            android:layout_toRightOf="@id/name_tv"
+            android:hint="请输入负责人姓名" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/name_ed"
+            android:layout_toRightOf="@id/name_tv" />
+
+        <TextView
+            android:id="@+id/identity_tv"
+            style="@style/cardViewTextView"
+            android:layout_below="@id/name_tv"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="身份:" />
+
+        <ImageView
+            android:id="@+id/identity_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignBottom="@id/identity_tv"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/dp_5"
+            android:src="@mipmap/spinner" />
+
+        <EditText
+            android:id="@+id/identity_ed"
+            style="@style/cardViewEditText"
+            android:layout_alignBottom="@id/identity_tv"
+            android:layout_toLeftOf="@id/identity_iv"
+            android:layout_toRightOf="@id/identity_tv"
+            android:hint="请选择相应职位" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/identity_ed"
+            android:layout_toRightOf="@id/identity_tv" />
+
+        <TextView
+            android:id="@+id/phone_tv"
+            style="@style/cardViewTextView"
+            android:layout_below="@id/identity_tv"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="电话:" />
+
+
+        <EditText
+            android:id="@+id/phone_ed"
+            style="@style/cardViewEditText"
+            android:layout_alignBottom="@id/phone_tv"
+            android:layout_toRightOf="@id/phone_tv"
+            android:hint="请输入手机号" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/phone_ed"
+            android:layout_toRightOf="@id/phone_tv" />
+
+
+    </RelativeLayout>
+</LinearLayout>

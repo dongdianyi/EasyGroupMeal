@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@drawable/fillet_blue">
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/task_spinner"
+            style="@style/spinner_style_white"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/dp_30"
+            android:dropDownVerticalOffset="@dimen/dp_30"
+            android:paddingLeft="@dimen/dp_5"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notes_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注:"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:src="@color/red"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为紧急任务"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <com.meetsl.scardview.SCardView
+        android:id="@+id/staff_task"
+        style="@style/AppHWrapStyle"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_14"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_8"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_14">
+
+            <TextView
+                android:id="@+id/team_tv"
+                style="@style/cardViewTextView"
+                android:text="@string/team" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/team_spinner"
+                style="@style/spinner_style"
+                android:layout_alignBottom="@id/team_tv"
+                android:layout_toRightOf="@id/team_tv" />
+
+            <TextView
+                android:id="@+id/task_spinner_line"
+                style="@style/line_margin"
+                android:layout_below="@id/team_tv" />
+
+            <TextView
+                android:id="@+id/staff_tv"
+                style="@style/cardViewTextView"
+                android:layout_below="@id/task_spinner_line"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="员工" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/staff_spinner"
+                style="@style/spinner_style"
+                android:layout_alignBottom="@id/staff_tv"
+                android:layout_toRightOf="@id/staff_tv" />
+
+            <TextView
+                style="@style/line_margin"
+                android:layout_below="@id/staff_tv" />
+        </RelativeLayout>
+    </com.meetsl.scardview.SCardView>
+</LinearLayout>

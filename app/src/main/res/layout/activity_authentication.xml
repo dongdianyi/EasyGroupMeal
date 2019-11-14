@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.AuthenticationActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/authentication" />
+
+        <TextView
+            android:id="@+id/submission"
+            style="@style/righttext"
+            android:text="@string/submission" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dp_14">
+
+        <TextView
+            android:id="@+id/enterprise_name_tv"
+            style="@style/cardViewTextView"
+            android:text="@string/enterprise_name" />
+
+        <EditText
+            android:id="@+id/enterprise_name_ed"
+            style="@style/cardViewEditText"
+            android:layout_alignBottom="@id/enterprise_name_tv"
+            android:layout_toRightOf="@id/enterprise_name_tv"
+            android:hint="@string/input_enterprise_name" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/enterprise_name_ed" />
+
+        <TextView
+            android:id="@+id/restaurant_name_tv"
+            style="@style/cardViewTextView"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_below="@id/enterprise_name_ed"
+            android:text="@string/restaurant_name" />
+
+        <LinearLayout
+            android:id="@+id/restaurant_name_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/restaurant_name_tv"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_toRightOf="@id/restaurant_name_tv"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/restaurant_name_ed"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/input_restaurant_name"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/restaurant_nickname_ed"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/nickname"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restaurant_name_linear"
+            android:layout_alignLeft="@id/restaurant_name_linear"
+            android:layout_toRightOf="@id/restaurant_name_tv"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_weight="1"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_weight="1"
+                android:background="@color/line_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/enterprise_address_tv"
+            style="@style/cardViewTextView"
+            android:layout_below="@id/restaurant_name_linear"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/enterprise_address"/>
+
+        <EditText
+            android:id="@+id/enterprise_address_ed"
+            style="@style/cardViewEditText"
+            android:layout_alignBottom="@id/enterprise_address_tv"
+            android:layout_toRightOf="@id/enterprise_address_tv"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/input_enterprise_address"/>
+
+        <ImageView
+            android:id="@+id/enterprise_address_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/enterprise_address_ed"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/address" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/enterprise_address_ed"
+            android:layout_alignLeft="@id/enterprise_address_ed" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        android:background="@color/white">
+
+        <TextView
+           style="@style/listTextViewStyle"
+            android:text="@string/input_proof_material"/>
+
+        <TextView
+            style="@style/listRightTextViewStyle"
+            android:id="@+id/proof_material_tv"
+            android:text="上传"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/proof_material"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:background="@color/white" />
+</LinearLayout>

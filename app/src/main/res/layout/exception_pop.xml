@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:ignore="ContentDescription"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_72"
+        android:background="@drawable/fillet_red_top"
+        android:gravity="center"
+        android:id="@+id/title_pop"
+        android:text="@string/exception_submit"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/white"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="@dimen/dp_150"
+            android:layout_alignParentRight="true"
+            android:id="@+id/photo_iv"
+            android:layout_height="@dimen/dp_150" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:id="@+id/photograph_tv"
+            android:gravity="center"
+            android:text="拍照备注"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/blue"/>
+        <ImageView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:padding="@dimen/dp_14"
+            android:id="@+id/camear"
+            android:layout_toLeftOf="@id/photograph_tv"
+            android:layout_alignBottom="@id/photograph_tv"
+            android:src="@mipmap/camear"/>
+        <EditText
+            style="@style/AppMatchStyle"
+            android:layout_toLeftOf="@id/photo_iv"
+            android:padding="@dimen/dp_14"
+            android:gravity="start"
+            android:id="@+id/error_reason_ed"
+            android:textSize="@dimen/sp_14"
+            android:background="@color/white"
+            android:hint="请输入没有正常提交的原因"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/line"/>
+
+    <TextView
+        android:id="@+id/submission"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/fillet_white_bottom"
+        android:gravity="center"
+        android:textSize="@dimen/sp_16"
+        android:text="@string/submission"
+        android:textColor="@color/text_default" />
+
+</LinearLayout>

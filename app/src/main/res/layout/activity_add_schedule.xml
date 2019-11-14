@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.AddScheduleActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/add_schedule" />
+
+        <TextView
+            android:id="@+id/add"
+            style="@style/righttext"
+            android:text="@string/add" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_50"
+                android:textSize="@dimen/sp_14"
+                android:background="@color/white"
+                android:hint="标题"
+                android:id="@+id/title_ed"
+                android:paddingLeft="@dimen/dp_14" />
+
+            <TextView
+               style="@style/line"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_50"
+                android:background="@color/white"
+                android:id="@+id/address_ed"
+                android:hint="地点"
+                android:textSize="@dimen/sp_14"
+                android:paddingLeft="@dimen/dp_14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/cardViewTextView"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dp_14"
+                    android:textSize="@dimen/sp_14"
+                    android:text="全天"/>
+
+                <com.zcw.togglebutton.ToggleButton
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_27"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/togglebutton"
+                    android:layout_marginRight="@dimen/dp_14"
+                    app:tbOnColor="@color/blue" />
+            </RelativeLayout>
+
+            <TextView
+               style="@style/line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white"
+                android:id="@+id/start_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/listTextViewStyle"
+                    android:text="开始" />
+
+                <TextView
+                    style="@style/listRightTextViewStyle"
+                    android:id="@+id/start_date_tv"
+                    android:text="2019-10-21 18:00" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white"
+                android:id="@+id/end_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/listTextViewStyle"
+                    android:text="结束" />
+
+                <TextView
+                    style="@style/listRightTextViewStyle"
+                    android:text="2019-10-21 18:00"
+                    android:id="@+id/end_date_tv" />
+
+            </LinearLayout>
+
+            <TextView
+               style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white"
+                android:id="@+id/remind_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/listTextViewStyle"
+                    android:text="提醒"/>
+
+                <TextView
+                    style="@style/listRightTextViewStyle"
+                    android:text="无"
+                    android:id="@+id/remind_tv" />
+
+                <ImageView
+                    style="@style/moreStyle" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/line" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:id="@+id/remarks_ed"
+                android:hint="备注"
+                android:minHeight="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_14" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

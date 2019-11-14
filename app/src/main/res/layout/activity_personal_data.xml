@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/line_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.PersonalDataActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:id="@+id/title"
+            android:text="@string/personal_data" />
+
+        <TextView
+            style="@style/righttext"
+            android:id="@+id/sure"
+            android:text="@string/sure"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:id="@+id/avatar_linear"
+        android:orientation="horizontal">
+        <TextView
+           style="@style/listTextViewStyle"
+            android:text="@string/avatar" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:src="@mipmap/photo"
+            android:layout_marginRight="@dimen/dp_14"
+            android:id="@+id/avatar"
+            android:visibility="gone"
+            android:layout_height="@dimen/dp_40" />
+        <TextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_14"
+            android:textColor="@color/white"
+            android:id="@+id/avatar_tv"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/cricle_blue"
+            android:layout_height="@dimen/dp_40" />
+        <ImageView
+            style="@style/moreStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="姓名" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/dp_14"
+            android:id="@+id/name_ed"
+            android:hint="请输入您的姓名"
+            android:minWidth="@dimen/dp_100"
+            android:textSize="@dimen/sp_14"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

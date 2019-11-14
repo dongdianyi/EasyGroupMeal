@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.TaskMessageActivity">
+    <RelativeLayout
+        android:id="@+id/message_relative"
+        style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"
+            android:layout_alignParentBottom="true" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:id="@+id/title"
+            android:text="@string/message" />
+
+        <TextView
+            style="@style/AppWWrapStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_27"
+            android:padding="@dimen/dp_12"
+            android:textColor="@color/white"
+            android:id="@+id/delete"
+            android:textSize="@dimen/sp_16"
+            android:text="编辑"/>
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_relative"
+        android:id="@+id/message_recycler" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/message_linear"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:id="@+id/all_select"
+            android:gravity="center"
+            android:text="全选"/>
+        <TextView
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/line_color"/>
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:id="@+id/cancel"
+            android:gravity="center"
+            android:text="@string/cancel"/>
+        <TextView
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/line_color"/>
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:id="@+id/delete_bottom"
+            android:gravity="center"
+            android:text="@string/delete"/>
+    </LinearLayout>
+</RelativeLayout>

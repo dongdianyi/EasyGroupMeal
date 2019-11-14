@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/line_color"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyLeaveActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="请假记录" />
+
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/leave_recycler"/>
+</LinearLayout>

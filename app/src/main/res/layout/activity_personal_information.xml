@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.PersonalInformationActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:id="@+id/title"
+            android:text="@string/personal_information" />
+    </RelativeLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@mipmap/photo"
+        android:id="@+id/avatar"
+        android:layout_marginTop="@dimen/dp_36"
+        />
+    <com.meetsl.scardview.SCardView
+        style="@style/cardViewStyle">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp_14"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/name_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/name_tv"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_toRightOf="@id/name_tv"
+                android:background="@null"
+                android:hint="@string/input_name"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@id/name_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/line_color" />
+            <TextView
+                android:id="@+id/position_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_tv"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/position"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/position_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/position_tv"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_toRightOf="@id/position_tv"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="请选择您的职务"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14" />
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_36"
+                android:paddingLeft="@dimen/dp_27"
+                android:paddingTop="@dimen/dp_20"
+                android:layout_alignBottom="@id/position_tv"
+                android:id="@+id/position_spinner"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/spinner" />
+        </RelativeLayout>
+    </com.meetsl.scardview.SCardView>
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/fillet_blueshallow_more"
+            android:gravity="center"
+            android:text="@string/start"
+            android:textColor="@color/white" />
+</LinearLayout>

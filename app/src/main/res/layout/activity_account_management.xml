@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.AccountManagementActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"
+            />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/account_management" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/account_information_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="@string/account_information" />
+
+        <TextView
+            android:id="@+id/account_information_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_14" />
+
+        <ImageView style="@style/moreStyle" />
+
+    </LinearLayout>
+
+    <TextView style="@style/line" />
+
+    <LinearLayout
+        android:id="@+id/change_password_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="@string/change_password" />
+
+        <ImageView style="@style/moreStyle"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/text_default" />
+</LinearLayout>

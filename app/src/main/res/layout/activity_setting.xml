@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.SettingActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/setting" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:id="@+id/account_management_linear"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="@string/account_management" />
+
+        <ImageView
+            style="@style/moreStyle" />
+    </LinearLayout>
+    <TextView
+        style="@style/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/clear_cache_linear"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="@string/clear_cache" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/dp_14"
+            android:id="@+id/clear_cache_tv"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent" />
+        <ImageView
+            style="@style/moreStyle" />
+    </LinearLayout>
+    <TextView
+        style="@style/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/new_version_linear"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="@string/new_version"/>
+
+        <ImageView
+            style="@style/moreStyle" />
+    </LinearLayout>
+    <TextView
+        style="@style/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/about_linear"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/listTextViewStyle"
+            android:text="关于APP" />
+
+        <ImageView
+           style="@style/moreStyle"/>
+    </LinearLayout>
+</LinearLayout>

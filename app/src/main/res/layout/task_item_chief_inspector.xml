@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fillet_white">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:id="@+id/linear"
+        android:layout_below="@id/content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/time_icon" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/text_gray" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_12"
+            android:id="@+id/exception_submit"
+            android:background="@drawable/fillet_white_red"
+            android:text="@string/exception_submit"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@drawable/fillet_white_blue"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:id="@+id/submit_normally"
+            android:textSize="@dimen/sp_12"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_shallow"
+            android:text="@string/submit_normally"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@drawable/fillet_white_blue"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:id="@+id/update_state"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            android:textColor="@color/blue_shallow"
+            android:text="@string/update_state"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="@drawable/fillet_white_red"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp_12"
+            android:id="@+id/no_complete"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="未完成备注"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="@dimen/dp_4"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/linear"
+        android:layout_alignTop="@id/content"
+        android:id="@+id/iswarn_tv"
+        android:background="@drawable/fillet_blue_left" />
+</RelativeLayout>

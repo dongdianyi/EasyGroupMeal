@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppMatchStyle"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.JoinCompanyActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:id="@+id/title"
+            android:text="@string/join_team" />
+        <TextView
+            style="@style/righttext"
+            android:text="@string/create_company"
+            android:id="@+id/create_company"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_margin="@dimen/dp_22"
+        android:background="@drawable/fillet_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/search_icon" />
+
+        <EditText
+            android:id="@+id/search_company_ed"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="center_vertical"
+            android:hint="搜索公司/餐厅"
+            android:singleLine="true"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/clear_iv"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/clear_icon" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_marginBottom="@dimen/dp_22"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:id="@+id/company_recycler"
+            android:layout_marginBottom="@dimen/dp_60"
+            style="@style/AppHWrapStyle"/>
+        <TextView
+            android:id="@+id/join_team"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/fillet_blueshallow"
+            android:gravity="center"
+            android:text="@string/join_team"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</LinearLayout>

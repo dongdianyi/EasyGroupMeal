@@ -1,0 +1,206 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:dropDownListViewStyle">@style/XSpinnerStyle</item>
+    </style>
+    //取消Bar
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    //相同属性提出
+    <style name="AppStyle">
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/fillet_blue</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="listTextViewStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:paddingLeft">@dimen/dp_14</item>
+    </style>
+    <style name="listTextView2Style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <style name="listRightTextViewStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:layout_marginRight">@dimen/dp_14</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="moreStyle">
+        <item name="android:layout_height">@dimen/dp_12</item>
+        <item name="android:layout_width">@dimen/dp_8</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/dp_14</item>
+        <item name="android:src">@mipmap/more_iv</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+    <style name="line_margin">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+        <item name="android:layout_marginTop">@dimen/dp_4</item>
+    </style>
+    <style name="righttext">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">@dimen/dp_27</item>
+        <item name="android:padding">@dimen/dp_12</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <style name="cardViewStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/dp_14</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/dp_8</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">false</item>
+    </style>
+    <style name="cardViewTextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/text_default</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <style name="cardViewEditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/dp_14</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@null</item>
+    </style>
+    //相同Wrap属性提出
+
+    <style name="AppWrapStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="AppHWrapStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="AppWWrapStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    //相同Match属性提出
+
+    <style name="AppMatchStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    //标题的样式
+
+    <style name="TitleStyle_Text">
+        <item name="android:layout_height">@dimen/dp_72</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/dp_27</item>
+    </style>
+
+    <style name="TitleStyle_Relative">
+        <item name="android:background">@color/blue</item>
+        <item name="android:layout_height">@dimen/dp_72</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    //返回键的样式
+
+    <style name="TitleStyle_Back">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_height">@dimen/dp_45</item>
+        <item name="android:layout_width">@dimen/dp_45</item>
+        <item name="android:padding">@dimen/dp_14</item>
+        <item name="android:src">@mipmap/back</item>
+    </style>
+    //弹框的样式
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="BaseDialog" parent="android:Theme.Light">
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    //下方弹出
+
+    <style name="BottomDialog.Animation" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
+
+    //spinner
+    <style name="XSpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <item name="android:divider">#DFDFDF</item><!-- 分隔线颜色 -->
+        <item name="android:dividerHeight">1dp</item>
+        <!-- item按下效果 -->
+        <!--<item name="android:listSelector">@color/white</item>-->
+    </style>
+
+    <style name="spinner_style" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_raow_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_20</item>
+        <item name="android:layout_marginLeft">@dimen/dp_14</item>
+        <item name="android:dropDownVerticalOffset">@dimen/dp_22</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:textColorHint">@color/text_default</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="spinner_style_white" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_raow_selector_white</item>
+    </style>
+
+</resources>

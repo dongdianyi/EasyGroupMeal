@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_12">
+
+    <TextView
+        android:id="@+id/is_read_tv"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/cricle_blue" />
+
+    <TextView
+        android:id="@+id/content"
+        style="@style/listTextViewStyle"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="李工未完成清洁任务" />
+
+    <LinearLayout
+        android:id="@+id/more_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:text="查看详情"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/message_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:button="@drawable/checkbox_select" />
+
+</LinearLayout>

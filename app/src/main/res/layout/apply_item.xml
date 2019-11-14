@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dp_14"
+    android:layout_marginLeft="@dimen/dp_14"
+    android:layout_marginRight="@dimen/dp_14"
+    android:background="@drawable/fillet_white">
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/refuse_tv"
+        android:layout_width="wrap_content"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_10"
+        android:layout_height="wrap_content"
+        android:text="@string/refuse"
+        android:background="@drawable/fillet_red"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/agree_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agree"
+        android:background="@drawable/fillet_blue"
+        android:textColor="@color/white"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.meetsl.scardview.SCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_8"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_14">
+
+        <TextView
+            style="@style/listRightTextViewStyle"
+            android:text="@string/app_name"
+            android:id="@+id/administartors_name" />
+
+        <TextView
+            style="@style/listRightTextViewStyle"
+            android:text="@string/app_name"
+            android:id="@+id/administartors_position" />
+
+        <TextView
+            style="@style/listTextViewStyle"
+            android:id="@+id/administartors_phone"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:id="@+id/delete"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</com.meetsl.scardview.SCardView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:id="@+id/person_in_charge"
+            android:text="甲方负责人"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:id="@+id/add_staff"
+            android:text="添加成员"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/fillet_white"
+        android:gravity="center"
+        android:id="@+id/cancel_tv"
+        android:text="@string/cancel"
+        android:textColor="@color/text_default"
+        android:textSize="@dimen/sp_18" />
+</LinearLayout>

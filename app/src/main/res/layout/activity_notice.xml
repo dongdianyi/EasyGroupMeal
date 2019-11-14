@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.NoticeActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/notice" />
+
+        <ImageView
+            style="@style/AppWWrapStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_27"
+            android:padding="@dimen/dp_12"
+            android:id="@+id/add_notice"
+            android:src="@mipmap/add_icon" />
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/notice_recycler" />
+</LinearLayout>

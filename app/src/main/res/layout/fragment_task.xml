@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/label_list_sample_rfal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:rfal_frame_alpha="0.7"
+    app:rfal_frame_color="@color/white"
+    tools:context=".fragment.TaskFragment"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line_color"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/TitleStyle_Relative">
+
+            <TextView
+                style="@style/TitleStyle_Text"
+                android:text="@string/task" />
+
+            <ImageView
+                android:id="@+id/message_iv"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_27"
+                android:padding="@dimen/dp_12"
+                android:src="@mipmap/message" />
+            <TextView
+                android:visibility="gone"
+                android:gravity="center"
+                android:id="@+id/task_message_red"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                android:layout_alignRight="@id/message_iv"
+                android:layout_alignTop="@id/message_iv"
+                android:background="@drawable/cricle_red" />
+        </RelativeLayout>
+
+
+        <gzkj.easygroupmeal.utli.RefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/line_color">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapsing"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_14"
+                        android:fitsSystemWindows="true"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/notice_linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp_14"
+                                android:background="@color/line_color2"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/business_bulletin"
+                                    android:textColor="@color/text_default"
+                                    android:textSize="@dimen/sp_12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_2"
+                                    android:src="@mipmap/horn_icon" />
+
+                                <gzkj.easygroupmeal.utli.MarqueeText
+                                    android:id="@+id/tv_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_default" />
+                            </LinearLayout>
+
+                            <com.stay4it.banner.Banner
+                                android:id="@+id/banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_150" />
+                        </LinearLayout>
+                    </android.support.design.widget.CollapsingToolbarLayout>
+
+                    <com.androidkun.xtablayout.XTabLayout
+                        android:id="@+id/task_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        app:xTabSelectedTextColor="@color/text_default"
+                        app:xTabTextSize="@dimen/sp_14" />
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/task_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </android.support.design.widget.CoordinatorLayout>
+        </gzkj.easygroupmeal.utli.RefreshLayout>
+    </LinearLayout>
+    <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton xmlns:rfab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/label_list_sample_rfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        rfab:rfab_color_normal="@color/blue"
+        rfab:rfab_color_pressed="@color/blue"
+        rfab:rfab_drawable="@drawable/rfab__drawable_rfab_default"
+        rfab:rfab_shadow_color="#999999"
+        rfab:rfab_shadow_dx="0dp"
+        rfab:rfab_shadow_dy="5dp"
+        rfab:rfab_shadow_radius="7dp"
+        rfab:rfab_size="normal" />
+</com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>

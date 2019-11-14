@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/line_color"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.AddNoticeActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:text="@string/addnotice" />
+
+        <TextView
+            style="@style/righttext"
+            android:id="@+id/release_tv"
+            android:text="@string/release" />
+    </RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:padding="@dimen/dp_14"
+        android:id="@+id/notice_ed"
+        android:background="@drawable/fillet_white"
+        android:hint="请编辑新公告..."
+        android:gravity="top"
+        android:textSize="@dimen/sp_14"
+        android:minHeight="@dimen/dp_300"/>
+</LinearLayout>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.CreateTeamActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:text="@string/create_company" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.meetsl.scardview.SCardView
+                android:id="@+id/company_cardview"
+                style="@style/cardViewStyle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        android:id="@+id/enterprise_name_tv"
+                        style="@style/cardViewTextView"
+                        android:text="@string/enterprise_name" />
+
+                    <EditText
+                        android:id="@+id/enterprise_name_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/enterprise_name_tv"
+                        android:layout_toRightOf="@id/enterprise_name_tv"
+                        android:hint="@string/input_enterprise_name" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/enterprise_name_ed"
+                        android:layout_alignLeft="@id/enterprise_name_ed" />
+
+                    <TextView
+                        android:id="@+id/enterprise_legal_person_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/enterprise_name_ed"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/enterprise_legal_person" />
+
+                    <EditText
+                        android:id="@+id/enterprise_legal_person_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/enterprise_legal_person_tv"
+                        android:layout_toRightOf="@id/enterprise_name_tv"
+                        android:hint="@string/input_erterprise_legal_person" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/enterprise_legal_person_ed"
+                        android:layout_alignLeft="@id/enterprise_legal_person_ed" />
+
+                    <TextView
+                        android:id="@+id/creditcode_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/enterprise_legal_person_ed"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/creditcode" />
+
+                    <EditText
+                        android:id="@+id/creditcode_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/creditcode_tv"
+                        android:layout_toRightOf="@id/creditcode_tv"
+                        android:hint="@string/input_creditcode" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/creditcode_ed"
+                        android:layout_alignLeft="@id/creditcode_ed" />
+
+                    <TextView
+                        android:id="@+id/enterprise_address_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/creditcode_ed"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/enterprise_address" />
+
+                    <EditText
+                        android:id="@+id/enterprise_address_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/enterprise_address_tv"
+                        android:layout_toRightOf="@id/enterprise_address_tv"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/input_enterprise_address" />
+
+                    <ImageView
+                        android:id="@+id/enterprise_address_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/enterprise_address_ed"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/address" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/enterprise_address_ed"
+                        android:layout_alignLeft="@id/enterprise_address_ed"/>
+
+                    <TextView
+                        android:id="@+id/enterprise_scale_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/enterprise_address_ed"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/enterprise_scale" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/num_spinner"
+                        style="@style/spinner_style"
+                        android:layout_alignBottom="@id/enterprise_scale_tv"
+                        android:layout_toRightOf="@id/enterprise_scale_tv"
+                        android:entries="@array/num" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/num_spinner"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_toRightOf="@id/enterprise_scale_tv" />
+                </RelativeLayout>
+            </com.meetsl.scardview.SCardView>
+
+
+            <com.meetsl.scardview.SCardView
+                android:id="@+id/team_cardview"
+                style="@style/cardViewStyle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        android:id="@+id/restaurant_name_tv"
+                        style="@style/cardViewTextView"
+                        android:text="@string/restaurant_name" />
+
+                    <EditText
+                        android:id="@+id/restaurant_name_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/restaurant_name_tv"
+                        android:layout_toRightOf="@id/restaurant_name_tv"
+                        android:hint="@string/input_restaurant_name"/>
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/restaurant_name_ed"
+                        android:layout_alignLeft="@id/restaurant_name_ed"
+                         />
+
+                    <TextView
+                        android:id="@+id/restaurant_nickname_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/restaurant_name_ed"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/restaurant_nickname" />
+
+                    <LinearLayout
+                        android:id="@+id/restaurant_name_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/restaurant_nickname_tv"
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_toRightOf="@id/restaurant_nickname_tv"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/restaurant_school_ed"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/school"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp_14" />
+
+                        <EditText
+                            android:id="@+id/restaurant_nickname_ed"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_14"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/nickname"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/restaurant_name_linear"
+                        android:layout_alignLeft="@id/restaurant_name_linear"
+                        android:layout_toRightOf="@id/restaurant_name_tv"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@color/line_color" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/restaurant_address_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/restaurant_name_linear"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/restaurant_address" />
+
+                    <EditText
+                        android:id="@+id/restaurant_address_ed"
+                        style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/restaurant_address_tv"
+                        android:layout_toRightOf="@id/restaurant_address_tv"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/input_restaurant_address"/>
+
+                    <ImageView
+                        android:id="@+id/restaurant_address_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/restaurant_address_tv"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/address" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/restaurant_address_ed"
+                        android:layout_alignLeft="@id/restaurant_address_ed" />
+
+                    <TextView
+                        android:id="@+id/company_tv"
+                        style="@style/cardViewTextView"
+                        android:layout_below="@id/restaurant_address_tv"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:text="@string/belong_to_company"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/company_ed"
+                       style="@style/cardViewEditText"
+                        android:layout_alignBottom="@id/company_tv"
+                        android:layout_toRightOf="@id/company_tv"
+                        android:hint="@string/input_company_name"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/line_margin"
+                        android:layout_below="@id/company_ed"
+                        android:layout_alignLeft="@id/company_ed"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </com.meetsl.scardview.SCardView>
+
+
+            <com.meetsl.scardview.SCardView
+                android:id="@+id/membership_cardView"
+                style="@style/cardViewStyle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        style="@style/cardViewTextView"
+                        android:text="@string/membership_list" />
+
+                    <ImageView
+                        android:id="@+id/membership_list_iv"
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_20"
+                        android:padding="@dimen/dp_1"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/more_iv" />
+
+                    <TextView
+                        android:id="@+id/membership_list_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@id/membership_list_iv"
+                        android:text="@string/membership_list"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.github.jdsjlzx.recyclerview.LRecyclerView
+                        android:id="@+id/membership_list_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/membership_list_tv"
+                        android:layout_marginTop="@dimen/dp_20" />
+                </RelativeLayout>
+            </com.meetsl.scardview.SCardView>
+
+            <com.meetsl.scardview.SCardView
+                android:id="@+id/administrators_cardView"
+                style="@style/cardViewStyle">
+
+                <RelativeLayout
+                    android:id="@+id/administrators_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        android:id="@+id/administrators_tv"
+                        style="@style/cardViewTextView"
+                        android:text="@string/administrators" />
+
+                    <ImageView
+                        android:id="@+id/administrators_list_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:padding="@dimen/dp_1"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/more_iv" />
+
+                    <TextView
+                        android:id="@+id/administrators_list_tv"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_toLeftOf="@id/administrators_list_iv"
+                        android:text="@string/membership_list"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.github.jdsjlzx.recyclerview.LRecyclerView
+                        android:id="@+id/administrators_list_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/administrators_list_tv"
+                        android:layout_marginTop="@dimen/dp_20" />
+                </RelativeLayout>
+            </com.meetsl.scardview.SCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/create_team"
+                    android:layout_width="@dimen/dp_300"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/fillet_blueshallow"
+                    android:gravity="center"
+                    android:text="@string/create_company"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

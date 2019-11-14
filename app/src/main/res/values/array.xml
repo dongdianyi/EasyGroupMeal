@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="num">
+        <item>0-20人</item>
+        <item>20-99人</item>
+        <item>100-500人</item>
+        <item>500人以上</item>
+    </string-array>
+
+</resources>

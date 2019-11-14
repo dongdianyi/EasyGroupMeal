@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fillet_white"
+    tools:ignore="ContentDescription"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="@dimen/dp_4"
+        android:layout_height="match_parent"
+        android:id="@+id/iswarn_tv"
+        android:background="@drawable/fillet_blue_left" />
+
+    <TextView
+        android:id="@+id/time"
+        android:text="7:00"
+        style="@style/listTextView2Style" />
+
+    <TextView
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/text_default" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_8"
+        android:visibility="gone"
+        android:id="@+id/modify_iv"
+        android:src="@mipmap/update_task" />
+</LinearLayout>

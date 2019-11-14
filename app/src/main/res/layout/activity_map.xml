@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.MapActivity">
+    <RelativeLayout
+        android:id="@+id/relative" style="@style/TitleStyle_Relative">
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"
+            android:layout_alignParentBottom="true" />
+        <TextView
+            style="@style/TitleStyle_Text"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:text="所在位置" />
+    </RelativeLayout>
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_below="@id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_margin="@dimen/dp_22"
+        android:layout_below="@id/relative"
+        android:background="@drawable/fillet_white_more"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/search_icon" />
+
+        <EditText
+            android:id="@+id/search_map_ed"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="center_vertical"
+            android:hint="搜索地址"
+            android:singleLine="true"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/map"
+        android:id="@+id/map_recycler" />
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppMatchStyle"
+    tools:context=".activity.MainActivity"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        style="@style/AppHWrapStyle"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_2">
+
+        <RelativeLayout
+            android:id="@+id/schedule_linear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/schedule_iv"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/schedule_iv_checked" />
+
+            <TextView
+                android:id="@+id/schedule_tv"
+                style="@style/AppWrapStyle"
+                android:layout_below="@id/schedule_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/schedule"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/sp_10" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/task_linear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/task_iv"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/task_iv_unchecked" />
+
+            <TextView
+                android:id="@+id/task_tv"
+                style="@style/AppWrapStyle"
+                android:layout_below="@id/task_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/task"
+                android:textSize="@dimen/sp_10" />
+            <TextView
+                android:visibility="gone"
+                android:gravity="center"
+                android:id="@+id/task_message_red"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                android:layout_toRightOf="@id/task_iv"
+                android:background="@drawable/cricle_red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/team_linear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/team_iv"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/team_iv_unchecked" />
+
+            <TextView
+                android:id="@+id/team_tv"
+                style="@style/AppWrapStyle"
+                android:layout_below="@id/team_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/team"
+                android:textSize="@dimen/sp_10" />
+            <TextView
+                android:visibility="gone"
+                android:gravity="center"
+                android:id="@+id/team_apply_red"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                android:layout_toRightOf="@id/team_iv"
+                android:background="@drawable/cricle_red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mine_linear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/mine_iv"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/mine_iv_unchecked" />
+
+            <TextView
+                android:id="@+id/mine_tv"
+                style="@style/AppWrapStyle"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/mine_iv"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@string/mine"
+                android:textSize="@dimen/sp_10" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line"
+        style="@style/line"
+        android:layout_above="@id/main_linear" />
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:orientation="vertical" />
+
+
+</RelativeLayout>

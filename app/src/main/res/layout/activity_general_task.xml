@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.GeneralTaskActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:text="@string/general_task" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/righttext"
+            android:text="@string/sure" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_14"
+        android:padding="@dimen/dp_14"
+        android:background="@drawable/fillet_white">
+
+        <TextView
+            android:id="@+id/select_staff_tv"
+            style="@style/cardViewTextView"
+            android:text="选择员工" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/select_staff_spinner"
+            style="@style/spinner_style"
+            android:layout_toRightOf="@id/select_staff_tv" />
+
+
+        <TextView
+           style="@style/line_margin"
+            android:layout_below="@id/select_staff_spinner"
+            android:layout_toRightOf="@id/select_staff_tv" />
+
+        <TextView
+            android:id="@+id/select_task_tv"
+            style="@style/cardViewTextView"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_below="@id/select_staff_tv"
+            android:text="选择任务模板" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/select_task_spinner"
+            style="@style/spinner_style"
+            android:layout_alignBottom="@id/select_task_tv"
+            android:layout_toRightOf="@id/select_task_tv" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/select_task_spinner"
+            android:layout_toRightOf="@id/select_task_tv" />
+
+        <TextView
+            android:id="@+id/cycle_tv"
+            style="@style/cardViewTextView"
+            android:layout_below="@id/select_task_spinner"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="周期" />
+
+        <ImageView
+            android:id="@+id/cycle_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignBottom="@id/cycle_tv"
+            android:paddingRight="@dimen/dp_5"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/spinner" />
+
+        <EditText
+            android:id="@+id/cycle_ed"
+            style="@style/cardViewEditText"
+            android:layout_toLeftOf="@id/cycle_iv"
+            android:layout_toRightOf="@id/cycle_tv"
+            android:layout_alignBottom="@id/cycle_iv"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请选择周期" />
+
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/cycle_ed"
+            android:layout_toRightOf="@id/cycle_tv" />
+
+        <TextView
+            android:id="@+id/remind_tv"
+            style="@style/cardViewTextView"
+            android:layout_below="@id/cycle_tv"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="提醒" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/remind_spinner"
+            style="@style/spinner_style"
+            android:layout_alignBottom="@id/remind_tv"
+            android:layout_toRightOf="@id/remind_tv" />
+        <TextView
+            style="@style/line_margin"
+            android:layout_below="@id/remind_spinner"
+            android:layout_toRightOf="@id/remind_tv" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_14"
+        android:padding="@dimen/dp_14"
+        android:orientation="vertical"
+        android:background="@drawable/fillet_white">
+        <TextView
+            style="@style/cardViewTextView"
+            android:text="任务模板"/>
+        <TextView
+            style="@style/line_margin"
+            />
+
+        <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_recycler" />
+    </LinearLayout>
+</LinearLayout>

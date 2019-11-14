@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gzkj.easygroupmeal.utli.RefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout"
+    style="@style/AppMatchStyle">
+
+    <LinearLayout
+        style="@style/AppMatchStyle"
+        android:background="@color/line_color"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+
+        <RelativeLayout style="@style/TitleStyle_Relative">
+
+            <TextView
+                style="@style/TitleStyle_Text"
+                android:text="@string/schedule" />
+
+            <ImageView
+                android:id="@+id/add_schedule"
+                style="@style/AppWWrapStyle"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_27"
+                android:padding="@dimen/dp_12"
+                android:visibility="gone"
+                android:src="@mipmap/add_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/AppHWrapStyle"
+            android:layout_margin="@dimen/dp_14"
+            android:background="@drawable/fillet_white"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/name_tv"
+                style="@style/AppWrapStyle"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/position_tv"
+                style="@style/AppWrapStyle"
+                android:layout_alignBaseline="@id/name_tv"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/name_tv"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/company_tv"
+                style="@style/AppWrapStyle"
+                android:layout_below="@id/name_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_12" />
+            <TextView
+                android:id="@+id/verify_tv"
+                style="@style/AppWrapStyle"
+                android:layout_below="@id/name_tv"
+                android:visibility="gone"
+                android:layout_toRightOf="@id/company_tv"
+                android:paddingTop="@dimen/dp_10"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@drawable/fillet_white_top">
+
+            <TextView
+                android:id="@+id/tv_month_day"
+                style="@style/AppWWrapStyle"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_14"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_26"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                style="@style/AppWWrapStyle"
+                android:layout_toRightOf="@id/tv_month_day"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_12"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10" />
+
+                <TextView
+                    android:id="@+id/tv_lunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_current"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="@drawable/bg_ripple">
+
+                <ImageView
+                    android:id="@+id/ib_calendar"
+                    style="@style/AppMatchStyle"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/menu_action_calendar_mvp"
+                    android:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_current_day"
+                    style="@style/AppWrapStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <meal.group.easy.gzkj.calendarlibrary.CalendarLayout
+            android:id="@+id/calendarLayout"
+            style="@style/AppMatchStyle"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:orientation="vertical"
+            app:calendar_content_view_id="@+id/recyclerview"
+            app:default_status="expand">
+
+            <meal.group.easy.gzkj.calendarlibrary.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:calendar_padding="10dp"
+                app:current_day_lunar_text_color="#ff0000"
+                app:current_day_text_color="#ff0000"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:lunar_text_size="10sp"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_lunar_text_color="#e1e1e1"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_lunar_text_color="#CFCFCF"
+                app:scheme_text="假"
+                app:scheme_text_color="#333"
+                app:scheme_theme_color="#128c4b"
+                app:selected_lunar_text_color="#128c4b"
+                app:selected_text_color="#128c4b"
+                app:selected_theme_color="#80cfcfcf"
+                app:week_background="#fff"
+                app:week_bar_height="46dp"
+                app:week_bar_view="gzkj.easygroupmeal.group.EnglishWeekBar"
+                app:week_line_background="#00000000"
+                app:week_start_with="mon"
+                app:week_text_size="10sp"
+                app:year_view_background="#f6f6f6"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="9sp"
+                app:year_view_month_text_color="#ff0000"
+                app:year_view_month_text_size="20sp"
+                app:year_view_scheme_color="#f17706" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                style="@style/AppMatchStyle"
+                android:background="@color/line_color"
+                android:paddingTop="14dp" />
+        </meal.group.easy.gzkj.calendarlibrary.CalendarLayout>
+
+    </LinearLayout>
+</gzkj.easygroupmeal.utli.RefreshLayout>

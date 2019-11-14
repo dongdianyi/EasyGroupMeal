@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.UpdateTaskActivity">
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:text="编辑任务" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/AppWWrapStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_27"
+            android:padding="@dimen/dp_12"
+            android:text="@string/sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_12"
+        android:background="@drawable/fillet_white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:gravity="center"
+            android:id="@+id/time_linear"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/start_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间" />
+
+                <ImageView
+                    android:id="@+id/select_time_iv"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:src="@mipmap/spinner" />
+
+                <EditText
+                    android:id="@+id/select_time_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/select_time_iv"
+                    android:layout_toRightOf="@id/start_time_tv"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/time"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@id/select_time_ed"
+                    android:layout_toRightOf="@id/start_time_tv"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/end_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间" />
+
+                <ImageView
+                    android:id="@+id/end_time_iv"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:src="@mipmap/spinner" />
+
+                <EditText
+                    android:id="@+id/select_endtime_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/end_time_iv"
+                    android:layout_toRightOf="@id/end_time_tv"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@id/select_endtime_ed"
+                    android:layout_toRightOf="@id/end_time_tv"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_linear"
+            android:id="@+id/task_content_tv"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="任务内容:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_below="@id/task_content_tv"
+            android:id="@+id/task_content_ed"
+            android:background="@drawable/fillet_white_black"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_100"
+            android:gravity="top"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_5"
+            android:padding="@dimen/dp_10"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="@dimen/dp_0" />
+    <TextView
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
+        android:text="@string/delete"
+        android:id="@+id/delete"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/fillet_red"/>
+</LinearLayout>

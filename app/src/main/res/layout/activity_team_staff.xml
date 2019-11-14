@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.TeamStaffActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:text="@string/personal_information" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mine_avatar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/mine_avatar_tv"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cricle_blue"
+            android:gravity="center"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/username_tv"
+            style="@style/AppWrapStyle"
+            android:layout_below="@id/mine_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/text_default"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <com.meetsl.scardview.SCardView style="@style/cardViewStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/team_staff_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公司/团队"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/team_staff_name_tv"
+                style="@style/cardViewTextView"
+                android:layout_below="@id/team_staff_name"
+                android:layout_marginTop="@dimen/dp_5" />
+
+            <TextView
+                android:id="@+id/team_staff_name_line"
+                style="@style/line"
+                android:layout_below="@id/team_staff_name_tv"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5" />
+
+            <TextView
+                android:id="@+id/team_staff_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_staff_name_line"
+                android:text="职位"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/team_staff_position_tv"
+                style="@style/cardViewTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_staff_position"
+                android:layout_marginTop="@dimen/dp_5" />
+
+            <TextView
+                android:id="@+id/team_staff_position_line"
+                style="@style/line"
+                android:layout_below="@id/team_staff_position_tv"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5" />
+
+            <TextView
+                android:id="@+id/team_staff_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_staff_position_line"
+                android:text="电话"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/team_staff_phone_tv"
+                style="@style/cardViewTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_staff_phone"
+                android:layout_marginTop="@dimen/dp_5" />
+
+            <ImageView
+                android:id="@+id/team_staff_phone_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/team_staff_phone_tv"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/phone" />
+        </RelativeLayout>
+    </com.meetsl.scardview.SCardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="@dimen/dp_0" />
+    <TextView
+        style="@style/line" />
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:id="@+id/delete"
+        android:padding="@dimen/dp_16"
+        android:visibility="gone"
+        android:textColor="@color/text_default"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

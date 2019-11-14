@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription"
+    tools:context=".activity.AttendanceDateActivity">
+
+    <RelativeLayout style="@style/TitleStyle_Relative">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/TitleStyle_Back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleStyle_Text"
+            android:text="@string/attendance_date" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/righttext"
+            android:text="@string/sure" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_14"
+        android:background="@drawable/fillet_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_mon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周一" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_tue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周二" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_wed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周三" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_thu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周四" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_fri"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周五" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_sat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周六" />
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:id="@+id/attendance_date_linear_sun"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/attendance_date_checkbox_sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/checkbox_select"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                style="@style/listTextViewStyle"
+                android:text="每周日" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
